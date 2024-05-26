@@ -22,7 +22,8 @@ public class Employees {
     }
 
     public  String getInfo() {
-        return "";
+        return String.format(" Id:%d \n Name: %s \n Gender: %s \n BithDate: %s \n Division id: %d \n Division name: %s \n Salary: %d \n ----------------",
+                id, name, gender.toString(), birthDate.toString() ,division.getId(), division.getName(), Salary);
     }
 
 
