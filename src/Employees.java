@@ -10,14 +10,19 @@ public class Employees {
     private Division division;
     private int Salary;
 
-    public Employees(final String sourceLine) {
-        final var params = Arrays.asList(sourceLine.split(";"));
+    public Employees(final int id, final String name, final Gender gender,
+                    final LocalDate birthDate, final Division division, final int Salary) {
 
-        this.id = Integer.parseInt(params.get(0));
-        this.name = params.get(1);
-        this.gender = params.get(2) == "Male" ? Gender.Male : Gender.Female;
-        this.birthDate = LocalDate.parse(params.get(3));
-        this.Salary = Integer.parseInt(params.get(4));
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.division = division;
+        this.Salary = Salary;
+    }
+
+    public  String getInfo() {
+        return "";
     }
 
 
