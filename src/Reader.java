@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Reader {
-    private List<Division> divisionList;
+    private final List<Division> divisionList;
     Reader() {
         this.divisionList = new ArrayList<>();
     }
@@ -16,10 +16,14 @@ public class Reader {
         try {
             return Files.readString(targetFilePath);
         } catch (final IOException ioe) {
-            throw new RuntimeException(ioe.getMessage());
+            System.err.println(ioe.getMessage());
+            return "";
         }
     }
     private void checkDataValidity(final List<String> data) {
+        if (data.size() < 6) {
+            throw new RuntimeException("Invalid lines of data in file");
+        }
         try {
             Integer.parseInt(data.get(0));
         } catch (Exception e) {

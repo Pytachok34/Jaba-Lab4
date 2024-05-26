@@ -1,12 +1,14 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
 
 public class Employees {
+    @NotNull
     private int id;
     private String name;
     private Gender gender;
     private LocalDate birthDate;
+    @NotNull
     private Division division;
     private int Salary;
 
