@@ -1,5 +1,9 @@
+import java.nio.file.Path;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Reader rd = new Reader();
+        System.out.println(rd.read(Path.of("src/files/foreign_names.csv")));
+
     }
 }
