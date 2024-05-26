@@ -35,7 +35,7 @@ public class Reader {
      * Метод проверяющий строку данных на их валидность, вызывающий исключения в противном случае
      * @param data список данных в строковом формате
      */
-    private void checkDataValidity(final List<String> data) {
+    protected void checkDataValidity(final List<String> data) {
         if (data.size() < 6) {
             throw new RuntimeException("Invalid lines of data in file");
         }
